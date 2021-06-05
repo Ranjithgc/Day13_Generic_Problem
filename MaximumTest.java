@@ -51,4 +51,21 @@ class MaximumTest {
         Float expectedResult=5.5f;
         Assert.assertEquals(expectedResult,maximumResult);
     }
+
+ @Test
+    public void Given_Max_String_at_1st_Position_return_the_Same_String() {
+        String maximumResult=maximum.checkMaximum("Dog","Ant","Cat");
+        Assert.assertEquals("Dog",maximumResult);
+    }
+    @Test
+    public void Given_Max_String_at_2nd_Position_return_the_Same_String() {
+        String maximumResult=maximum.checkMaximum("Ant","Dog","Cat");
+        Assert.assertEquals("Dog",maximumResult);
+    }
+
+    @Test
+    public void Given_Max_String_at_3rd_Position_return_the_Same_String() {
+        String maximumResult = maximum.checkMaximum("Ant", "Cat", "Dog");
+        Assert.assertEquals("Dog", maximumResult);
+    }
 }
