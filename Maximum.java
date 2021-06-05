@@ -25,11 +25,25 @@ public class Maximum {
 		return max; // // returns maximum number
 	}
 	
+	// Calculating maximum of 3 Strings
+	public static String checkMaximum(String s1, String s2, String s3) {
+		String max = s1;
+		if(s2.compareTo(max) > 0) {
+			max = s2; // s2 is Maximum now 
+		}
+		if(s3.compareTo(max) > 0) {
+			max = s3; // s3 is Maximum now
+		}
+		return max; // returns maximum value
+	}
+
 	public static void main(String[] args) {
 		int c = checkMaximum(10,23,15);
 		int d = checkMaximum(12.5, 13.4, 22.0);
+		String s = checkMaximum("Apple", "Peach", "Banana");
 		System.out.println(c);
 		System.out.println(d);
+		System.out.println(s);
 	}
 
 }
